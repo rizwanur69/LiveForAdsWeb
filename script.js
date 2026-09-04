@@ -63,12 +63,8 @@ if ('IntersectionObserver' in window && countEls.length) {
   countEls.forEach(animateCount);
 }
 
-// ---------- live orb ticker on home hero ----------
-const orbVal = document.querySelector('.orb-core .val');
-if (orbVal) {
-  let base = parseInt(orbVal.dataset.base || '128450', 10);
-  setInterval(() => {
-    base += Math.floor(Math.random() * 8) + 2;
-    orbVal.textContent = base.toLocaleString();
-  }, 2200);
+// ---------- orb status pulse (no fake numbers — just a gentle live-status blink) ----------
+const orbStatusDot = document.querySelector('.orb-core .status-dot');
+if (orbStatusDot) {
+  orbStatusDot.classList.add('is-live');
 }

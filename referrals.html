@@ -21,8 +21,10 @@
       <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="referrals.html" class="active">Referrals</a>
-      <a href="roadmap.html">Roadmap &amp; Token</a>
-      <a href="http://t.me/LiveForAds_Bot" class="btn btn-primary">Open in Telegram</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="token.html">LFA Token</a>
+      <a href="#" class="btn btn-primary">Open in Telegram</a>
     </div>
   </nav>
 </header>
@@ -37,29 +39,70 @@
   </section>
 
   <section class="section wrap reveal" style="padding-top:0;">
-    <div class="grid grid-2" style="align-items:start;">
-      <div>
-        <table class="tbl">
-          <tr><th>Condition</th><th>Detail</th></tr>
-          <tr><td>Eligibility</td><td>Referred user watches 10 ads minimum</td></tr>
-          <tr><td>Fixed bonus</td><td class="num">+25 points</td></tr>
-          <tr><td>Ongoing commission</td><td class="num">10% of their ad points</td></tr>
-        </table>
-        <p class="muted" style="margin-top:20px; max-width:52ch;">The commission keeps paying out for as long as your referred user stays active — so bringing in genuinely engaged people is worth far more than a quick invite-and-forget.</p>
-        <div class="hero-ctas" style="margin-top:8px;">
-          <a href="#" class="btn btn-primary">Get your referral link</a>
-        </div>
-      </div>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>Condition</th><th>Detail</th></tr>
+      <tr><td>Eligibility</td><td>Referred user watches 25 ads (raised from 10)</td></tr>
+      <tr><td>Fixed bonus</td><td class="num">+25 points</td></tr>
+      <tr><td>Ongoing commission</td><td class="num">10% of their ad points</td></tr>
+    </table></div>
+    <p class="muted" style="margin-top:20px; max-width:60ch;">The commission keeps paying out for as long as your referred user stays active — so bringing in genuinely engaged people is worth far more than a quick invite-and-forget.</p>
+    <div class="hero-ctas" style="margin-top:8px; margin-bottom:32px;">
+      <a href="#" class="btn btn-primary">Get your referral link</a>
+    </div>
 
-      <div class="rtree reveal">
-        <div class="you">You</div>
-        <div class="stem"></div>
-        <div class="row">
-          <div class="node"><b>@arif_x</b><span>10/10 ads</span><span class="badge" style="margin-top:4px;">Eligible</span></div>
-          <div class="node"><b>@nusrat22</b><span>10/10 ads</span><span class="badge" style="margin-top:4px;">Eligible</span></div>
-          <div class="node pending"><b>@rakib_t</b><span>4/10 ads</span><span class="badge gold" style="margin-top:4px;">Pending</span></div>
+    <h3 style="margin-bottom:16px;">Your referrals</h3>
+    <div class="ref-card reveal">
+      <div class="ref-who">
+        <div class="ref-avatar">A</div>
+        <div class="ref-info">
+          <b>@arif_x</b>
+          <div class="sub">25/25 ads watched</div>
+          <span class="badge">Eligible</span>
+          <div class="progress-track" style="margin-top:10px;"><div class="progress-fill fill-high" style="width:100%;"></div></div>
         </div>
       </div>
+      <div class="ref-commission">
+        <div class="amt">+340 pts</div>
+        <div class="lbl">commission earned</div>
+      </div>
+    </div>
+
+    <div class="ref-card reveal">
+      <div class="ref-who">
+        <div class="ref-avatar">N</div>
+        <div class="ref-info">
+          <b>@nusrat22</b>
+          <div class="sub">18/25 ads watched</div>
+          <span class="badge gold">Pending</span>
+          <div class="progress-track" style="margin-top:10px;"><div class="progress-fill fill-mid" style="width:72%;"></div></div>
+        </div>
+      </div>
+      <div class="ref-commission">
+        <div class="amt">+95 pts</div>
+        <div class="lbl">commission earned</div>
+      </div>
+    </div>
+
+    <div class="ref-card reveal">
+      <div class="ref-who">
+        <div class="ref-avatar">R</div>
+        <div class="ref-info">
+          <b>@rakib_t</b>
+          <div class="sub">4/25 ads watched</div>
+          <span class="badge gold">Pending</span>
+          <div class="progress-track" style="margin-top:10px;"><div class="progress-fill fill-low" style="width:16%;"></div></div>
+        </div>
+      </div>
+      <div class="ref-commission">
+        <div class="amt">+0 pts</div>
+        <div class="lbl">commission earned</div>
+      </div>
+    </div>
+
+    <div class="ref-summary-bar reveal">
+      <div class="cell"><div class="n">3</div><div class="l">Referred</div></div>
+      <div class="cell"><div class="n">1</div><div class="l">Eligible</div></div>
+      <div class="cell"><div class="n">435</div><div class="l">Points earned (all)</div></div>
     </div>
   </section>
 
@@ -77,7 +120,7 @@
       <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
         <h3>Ads watched</h3>
-        <p>Live progress toward the 10-ad eligibility threshold.</p>
+        <p>Live progress toward the 25-ad eligibility threshold, shown with a color-shifting bar.</p>
       </div>
       <div class="card green reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -105,9 +148,38 @@
       <div class="foot-links">
         <a href="how-it-works.html">How It Works</a>
         <a href="referrals.html">Referrals</a>
-        <a href="roadmap.html">Roadmap &amp; Token</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="token.html">LFA Token</a>
+        <a href="whitepaper.pdf" target="_blank" class="wp-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M14 3v5h5M6 3h8l6 6v12H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Whitepaper
+        </a>
       </div>
     </div>
+
+    <div class="contact-block">
+      <h4>Contact us</h4>
+      <div style="display:flex; gap:22px; align-items:center; flex-wrap:wrap;">
+        <div class="contact-text">
+          <span style="font-size:0.8rem; color:var(--muted-2);">Telegram channel</span>
+          <a href="https://t.me/liveforads_2027" target="_blank" rel="noopener">t.me/liveforads_2027</a>
+        </div>
+        <div class="contact-text">
+          <span style="font-size:0.8rem; color:var(--muted-2);">Email</span>
+          <a href="mailto:liveforads2027@gmail.com">liveforads2027@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-icons">
+        <a href="https://t.me/liveforads_2027" target="_blank" rel="noopener" class="tg" aria-label="Telegram channel">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.3c-1 .4-1 1.7.1 2l4.4 1.4 1.7 5.3c.3.9 1.4 1.1 2 .4l2.5-2.7 4.8 3.6c.9.6 2.1.1 2.3-.9l3.3-15.1c.3-1.2-.9-2.2-2-1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 14.7l10.5-8.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="mailto:liveforads2027@gmail.com" class="mail" aria-label="Email">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
     <p class="foot-note">Live For Ads — built for and by its community. Payouts depend entirely on actual advertising revenue and community size; nothing on this site is financial or investment advice.</p>
   </div>
 </footer>

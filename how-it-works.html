@@ -21,8 +21,10 @@
       <a href="index.html">Home</a>
       <a href="how-it-works.html" class="active">How It Works</a>
       <a href="referrals.html">Referrals</a>
-      <a href="roadmap.html">Roadmap &amp; Token</a>
-      <a href="http://t.me/LiveForAds_Bot" class="btn btn-primary">Open in Telegram</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="token.html">LFA Token</a>
+      <a href="#" class="btn btn-primary">Open in Telegram</a>
     </div>
   </nav>
 </header>
@@ -33,38 +35,74 @@
       <span class="kicker">Mechanics</span>
       <h2>Ad-to-earn, in plain terms</h2>
       <p>Every point traces back to something real: an ad watched, a task done, or a friend who stuck around. Here's exactly how it's calculated.</p>
+      <a href="whitepaper.pdf" target="_blank" class="wp-link" style="margin-top:6px; display:inline-flex;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M14 3v5h5M6 3h8l6 6v12H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        Read the full whitepaper (PDF)
+      </a>
     </div>
   </section>
 
-  <!-- AD TO EARN -->
+  <!-- DAILY CHECK-IN -->
   <section class="section wrap reveal" style="padding-top:0;">
-    <h3 style="margin-bottom:18px;">Watching ads</h3>
-    <p class="muted" style="max-width:60ch;">Short rewarded video ads are served through in-app networks — including Adsgram and Monetag — built to run natively inside Telegram's WebView, so you never get bounced to an outside browser.</p>
-    <table class="tbl" style="margin-top:20px;">
+    <h3 style="margin-bottom:18px;">Daily check-in &amp; streak</h3>
+    <p class="muted" style="max-width:60ch;">A check-in box sits on the Home page, running Monday through Sunday. One tap claims the day's points — the streak count keeps climbing as long as you don't miss a day.</p>
+    <div class="tbl-wrap"><table class="tbl" style="margin-top:20px;">
       <tr><th>Rule</th><th>Detail</th></tr>
-      <tr><td>Points per ad</td><td class="num">10 points</td></tr>
-      <tr><td>Daily ad limit</td><td class="num">10 ads / user</td></tr>
-      <tr><td>Ad sources</td><td>Multiple networks, each with its own daily counter</td></tr>
-      <tr><td>Bonus task</td><td class="num">+5 points</td></tr>
-    </table>
+      <tr><td>Cycle</td><td>Monday to Sunday, tracked as a running streak</td></tr>
+      <tr><td>First check-in</td><td class="num">10 points</td></tr>
+      <tr><td>Each following day</td><td class="num">+5 pts over the last</td></tr>
+      <tr><td>Missed a day</td><td>Streak breaks, restarts at 10 points</td></tr>
+      <tr><td>Reset</td><td>00:00 UTC (6:00 AM BD time), daily</td></tr>
+    </table></div>
+  </section>
+
+  <!-- AD TO EARN -->
+  <section class="section wrap reveal">
+    <h3 style="margin-bottom:18px;">Watching ads</h3>
+    <p class="muted" style="max-width:60ch;">A dedicated Ads tab hosts 4–8 sponsor slots at a time, served through in-app rewarded-video networks built to run natively inside Telegram's WebView — so you never get bounced to an outside browser.</p>
+    <div class="tbl-wrap"><table class="tbl" style="margin-top:20px;">
+      <tr><th>Rule</th><th>Detail</th></tr>
+      <tr><td>Points per ad</td><td class="num">50 points</td></tr>
+      <tr><td>Ad slots</td><td class="num">4–8 slots</td></tr>
+      <tr><td>Per-company stats</td><td>Progress bar under the slots, per sponsor</td></tr>
+      <tr><td>Ad sources</td><td>Multiple networks, each tracked separately</td></tr>
+    </table></div>
+  </section>
+
+  <!-- TASKS -->
+  <section class="section wrap reveal">
+    <h3 style="margin-bottom:18px;">Tasks</h3>
+    <p class="muted" style="max-width:60ch;">Sitting right below the check-in box, the task list holds simple, visit-style actions the admin team can add or swap out any time.</p>
+    <div class="tbl-wrap"><table class="tbl" style="margin-top:20px;">
+      <tr><th>Rule</th><th>Detail</th></tr>
+      <tr><td>Points per task</td><td class="num">50 points</td></tr>
+      <tr><td>Live tasks now</td><td>Telegram subscribe, website visit, whitepaper view</td></tr>
+      <tr><td>Daily progress</td><td>Shown as a running counter (e.g. 3/20)</td></tr>
+      <tr><td>Reset</td><td>00:00 UTC (6:00 AM BD time), daily</td></tr>
+    </table></div>
   </section>
 
   <!-- POINTS SYSTEM -->
   <section class="section wrap reveal">
     <div class="section-head">
       <span class="kicker">Points system</span>
-      <h2>Three ways to earn</h2>
+      <h2>Four ways to earn</h2>
     </div>
     <div class="grid grid-3">
       <div class="card reveal">
+        <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 18v-6a3 3 0 016 0v6M4 12l8-8 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Daily check-in</h3>
+        <p>10–40+ points, streak-based — resets to 10 if you miss a day.</p>
+      </div>
+      <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
         <h3>Ad views</h3>
-        <p>10 points per ad, up to the daily cap of 10 — reset every day.</p>
+        <p>50 points per ad, across 4–8 sponsor slots on the Ads tab.</p>
       </div>
       <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Tasks</h3>
-        <p>Fixed one-time rewards, like subscribing to the official channel for 5 points.</p>
+        <p>50 points per task — admin-managed, resets daily.</p>
       </div>
       <div class="card gold reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
@@ -82,12 +120,12 @@
       <h2>Payouts run on a two-month cycle</h2>
       <p>Pool calculation happens once every two months, covering that season's full ad revenue and community points together.</p>
     </div>
-    <table class="tbl">
+    <div class="tbl-wrap"><table class="tbl">
       <tr><th>Period</th><th>Phase</th></tr>
       <tr><td>September – October</td><td><span class="badge blue">Testing Season</span></td></tr>
       <tr><td>November – December</td><td><span class="badge blue">Season 0</span></td></tr>
       <tr><td>January onward</td><td><span class="badge gold">Season 1, and beyond</span></td></tr>
-    </table>
+    </table></div>
   </section>
 
   <!-- WITHDRAWAL -->
@@ -100,12 +138,12 @@
       <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg></div>
         <h3>Withdrawal window</h3>
-        <p>Opens on the 1st of each month, for 24 hours only.</p>
+        <p>Switched on per season by the admin — typically the 1st–2nd of the month after a season ends.</p>
       </div>
       <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Review period</h3>
-        <p>Requests are manually reviewed and approved between the 3rd and 5th.</p>
+        <p>Requests are manually reviewed and approved, typically the 3rd–5th.</p>
       </div>
       <div class="card green reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M9 12h6M12 9v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
@@ -114,6 +152,9 @@
       </div>
     </div>
     <div class="notebox" style="margin-top:24px;">
+      <strong>The withdraw form is always visible, but stays off until a season closes.</strong> You'll see the withdrawal box on your Profile at all times, but it won't accept a wallet address until the admin switches it on for that season. Once it's live, the in-app message updates to show exactly which season's payout window is open and its dates — set per season from the admin panel, not a fixed monthly date.
+    </div>
+    <div class="notebox" style="margin-top:16px;">
       <strong>No fixed conversion rate.</strong> Payout amount comes from that season's allocation calculation — not a pre-set point-to-dollar ratio.
     </div>
   </section>
@@ -127,8 +168,8 @@
     </div>
     <div class="grid grid-2">
       <div class="card reveal"><h3>Persistent identity</h3><p>Progress is tied permanently to your Telegram ID.</p></div>
-      <div class="card reveal"><h3>Referral eligibility threshold</h3><p>A referred account must reach 10 watched ads before it counts.</p></div>
-      <div class="card reveal"><h3>Daily ad caps</h3><p>A hard limit of 10 ads per day per user prevents unnatural point accumulation.</p></div>
+      <div class="card reveal"><h3>Referral eligibility threshold</h3><p>A referred account must reach 25 watched ads before it counts.</p></div>
+      <div class="card reveal"><h3>Streak-break penalty</h3><p>Miss a check-in day and your streak resets to 10 points — steady beats bursty.</p></div>
       <div class="card reveal"><h3>Manual approval</h3><p>Every payout is reviewed by the admin before funds are sent.</p></div>
     </div>
   </section>
@@ -151,9 +192,38 @@
       <div class="foot-links">
         <a href="how-it-works.html">How It Works</a>
         <a href="referrals.html">Referrals</a>
-        <a href="roadmap.html">Roadmap &amp; Token</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="token.html">LFA Token</a>
+        <a href="whitepaper.pdf" target="_blank" class="wp-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M14 3v5h5M6 3h8l6 6v12H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Whitepaper
+        </a>
       </div>
     </div>
+
+    <div class="contact-block">
+      <h4>Contact us</h4>
+      <div style="display:flex; gap:22px; align-items:center; flex-wrap:wrap;">
+        <div class="contact-text">
+          <span style="font-size:0.8rem; color:var(--muted-2);">Telegram channel</span>
+          <a href="https://t.me/liveforads_2027" target="_blank" rel="noopener">t.me/liveforads_2027</a>
+        </div>
+        <div class="contact-text">
+          <span style="font-size:0.8rem; color:var(--muted-2);">Email</span>
+          <a href="mailto:liveforads2027@gmail.com">liveforads2027@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-icons">
+        <a href="https://t.me/liveforads_2027" target="_blank" rel="noopener" class="tg" aria-label="Telegram channel">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.3c-1 .4-1 1.7.1 2l4.4 1.4 1.7 5.3c.3.9 1.4 1.1 2 .4l2.5-2.7 4.8 3.6c.9.6 2.1.1 2.3-.9l3.3-15.1c.3-1.2-.9-2.2-2-1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 14.7l10.5-8.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="mailto:liveforads2027@gmail.com" class="mail" aria-label="Email">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
     <p class="foot-note">Live For Ads — built for and by its community. Payouts depend entirely on actual advertising revenue and community size; nothing on this site is financial or investment advice.</p>
   </div>
 </footer>
