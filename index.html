@@ -51,7 +51,7 @@
         Read the full whitepaper (PDF)
       </a>
       <div class="hero-stats">
-        <div class="stat"><b class="count" data-to="50" data-suffix=" pts">0</b><span>Per ad watched</span></div>
+        <div class="stat"><b class="count" data-to="50" data-suffix=" AP">0</b><span>Per ad watched</span></div>
         <div class="stat"><b class="count" data-to="8" data-prefix="4–">0</b><span>Sponsor ad slots</span></div>
         <div class="stat"><b class="count" data-to="2" data-suffix=" mo">0</b><span>Per payout season</span></div>
       </div>
@@ -97,8 +97,8 @@
       </div>
       <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <h3>Ads — Watch &amp; earn</h3>
-        <p>4–8 sponsor ad slots, 50 points each, with per-company watch stats below.</p>
+        <h3>Earn — Offerwall &amp; ads</h3>
+        <p>Cash-accurate offerwall tasks (UP) up top, sponsor ad slots (AP) below.</p>
       </div>
       <div class="card gold reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 21h8M12 17v4M17 3H7v4a5 5 0 0010 0V3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -142,87 +142,130 @@
         </div>
       </div>
       <div class="day-row">
-        <div class="day-pill done"><span class="d">Mon</span><span class="pts">10</span></div>
-        <div class="day-pill done"><span class="d">Tue</span><span class="pts">15</span></div>
-        <div class="day-pill done"><span class="d">Wed</span><span class="pts">20</span></div>
-        <div class="day-pill today"><span class="d">Thu</span><span class="pts">25</span></div>
-        <div class="day-pill future"><span class="d">Fri</span><span class="pts">30</span></div>
-        <div class="day-pill future"><span class="d">Sat</span><span class="pts">35</span></div>
-        <div class="day-pill future"><span class="d">Sun</span><span class="pts">40</span></div>
+        <div class="day-pill done"><span class="d">Mon</span><span class="mark">✓</span><span class="pts">10</span></div>
+        <div class="day-pill done"><span class="d">Tue</span><span class="mark">✓</span><span class="pts">15</span></div>
+        <div class="day-pill done"><span class="d">Wed</span><span class="mark">✓</span><span class="pts">20</span></div>
+        <div class="day-pill today"><span class="d">Thu</span><span class="mark"></span><span class="pts">25</span></div>
+        <div class="day-pill future"><span class="d">Fri</span><span class="mark"></span><span class="pts">30</span></div>
+        <div class="day-pill future"><span class="d">Sat</span><span class="mark"></span><span class="pts">35</span></div>
+        <div class="day-pill future"><span class="d">Sun</span><span class="mark"></span><span class="pts">40</span></div>
       </div>
       <button class="claim-btn" type="button">Claim today's 25 points</button>
-      <p class="streak-foot">Miss a day and the streak breaks — the next check-in starts back at 10 points.</p>
+      <p class="streak-foot">Completed days keep a checkmark, today glows until you claim it, and the rest stay blank until their turn. Miss a day and the streak breaks — the next check-in starts back at 10 points.</p>
     </div>
   </section>
 
-  <!-- ADS PAGE -->
+  <!-- EARN PAGE -->
   <section class="section wrap reveal">
     <div class="section-head">
-      <span class="kicker">Ads page</span>
-      <h2>4–8 sponsor slots, 50 points each</h2>
-      <p>Every watched ad pays 50 points instantly. Below the slots, a per-company breakdown shows exactly how many times you've watched each one today.</p>
+      <span class="kicker">Renamed: Ads → Earn</span>
+      <h2>Two ways to earn on one page</h2>
+      <p>The Earn tab splits into two sections — each paying out in a different currency, because ad revenue and offerwall payouts work differently under the hood.</p>
     </div>
-    <div class="ad-slots">
-      <div class="ad-slot reveal">
-        <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <div class="name">Sponsor A</div>
-        <div class="pts">+50 pts</div>
-      </div>
-      <div class="ad-slot reveal">
-        <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <div class="name">Sponsor B</div>
-        <div class="pts">+50 pts</div>
-      </div>
-      <div class="ad-slot reveal">
-        <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <div class="name">Sponsor C</div>
-        <div class="pts">+50 pts</div>
-      </div>
-      <div class="ad-slot reveal">
-        <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-        <div class="name">Sponsor D</div>
-        <div class="pts">+50 pts</div>
-      </div>
+
+    <div class="currency-note">
+      <span class="pt-chip up"><span class="dot"></span>UP — USD Points</span>
+      <span class="pt-chip ap"><span class="dot"></span>AP — Ad Points</span>
     </div>
-    <div class="card reveal" style="padding:20px 24px;">
-      <div class="stat-row">
-        <span class="co">Sponsor A</span>
-        <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:75%;"></div></div></div>
+
+    <!-- OFFERWALL / UP -->
+    <div class="earn-section offerwall reveal">
+      <div class="earn-section-head">
+        <div>
+          <h3>Section 1 — Offerwall</h3>
+          <p>Cash-accurate tasks from offerwall partners. Each one pays an exact USD amount, shown as UP.</p>
+        </div>
+        <span class="pt-chip up"><span class="dot"></span>Pays in UP</span>
       </div>
-      <div class="stat-row">
-        <span class="co">Sponsor B</span>
-        <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:40%;"></div></div></div>
+      <div class="grid grid-3">
+        <div class="ad-slot reveal" style="text-align:left; padding:14px 16px;">
+          <div class="name" style="margin-bottom:8px;">Install &amp; try app</div>
+          <div class="pts" style="color:var(--teal);">+20 UP</div>
+        </div>
+        <div class="ad-slot reveal" style="text-align:left; padding:14px 16px;">
+          <div class="name" style="margin-bottom:8px;">Complete survey</div>
+          <div class="pts" style="color:var(--teal);">+35 UP</div>
+        </div>
+        <div class="ad-slot reveal" style="text-align:left; padding:14px 16px;">
+          <div class="name" style="margin-bottom:8px;">Sign up offer</div>
+          <div class="pts" style="color:var(--teal);">+50 UP</div>
+        </div>
       </div>
-      <div class="stat-row">
-        <span class="co">Sponsor C</span>
-        <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:15%;"></div></div></div>
+      <p class="muted" style="margin-top:14px; margin-bottom:0; font-size:0.84rem;">100 UP = 1 USDT — a fixed, exact rate, since offerwall partners pay a known dollar amount per completed task.</p>
+    </div>
+
+    <!-- SPONSOR ADS / AP -->
+    <div class="earn-section sponsor reveal">
+      <div class="earn-section-head">
+        <div>
+          <h3>Section 2 — Sponsor Ads</h3>
+          <p>4–8 rewarded video slots. Ad revenue varies, so this pool gets split across the community by AP share.</p>
+        </div>
+        <span class="pt-chip ap"><span class="dot"></span>Pays in AP</span>
       </div>
+      <div class="ad-slots" style="margin-bottom:20px;">
+        <div class="ad-slot reveal">
+          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div class="name">Sponsor A</div>
+          <div class="pts">+50 AP</div>
+        </div>
+        <div class="ad-slot reveal">
+          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div class="name">Sponsor B</div>
+          <div class="pts">+50 AP</div>
+        </div>
+        <div class="ad-slot reveal">
+          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div class="name">Sponsor C</div>
+          <div class="pts">+50 AP</div>
+        </div>
+        <div class="ad-slot reveal">
+          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div class="name">Sponsor D</div>
+          <div class="pts">+50 AP</div>
+        </div>
+      </div>
+      <div class="card" style="padding:20px 24px;">
+        <div class="stat-row">
+          <span class="co">Sponsor A</span>
+          <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:75%;"></div></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="co">Sponsor B</span>
+          <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:40%;"></div></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="co">Sponsor C</span>
+          <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:15%;"></div></div></div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:14px; margin-bottom:0; font-size:0.84rem;">AP has no fixed rate — each season's ad revenue is pooled and divided across every user's AP share.</p>
     </div>
   </section>
 
   <!-- TASKS -->
   <section class="section wrap reveal">
     <div class="section-head">
-      <span class="kicker">Tasks</span>
+      <span class="kicker">Tasks <span class="pt-chip ap" style="margin-left:8px;"><span class="dot"></span>AP</span></span>
       <h2>Below the streak box: today's tasks</h2>
-      <p>Simple, one-time actions worth 50 points each. The admin team can add more any time — this is what's live right now.</p>
+      <p>Simple, one-time actions worth 50 AP each. The admin team can add more any time — this is what's live right now.</p>
     </div>
     <div class="task-counter">Today's progress: <b>3/20</b> slots used</div>
     <div class="task-list">
       <div class="task-row reveal">
         <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.3c-1 .4-1 1.7.1 2l4.4 1.4 1.7 5.3c.3.9 1.4 1.1 2 .4l2.5-2.7 4.8 3.6c.9.6 2.1.1 2.3-.9l3.3-15.1c.3-1.2-.9-2.2-2-1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
         <div class="info"><div class="t">Subscribe to the Telegram channel</div><div class="s">One-time · verified automatically</div></div>
-        <div class="pts-chip">+50 pts</div>
+        <div class="pts-chip">+50 AP</div>
       </div>
       <div class="task-row reveal">
         <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.3"/></svg></div>
         <div class="info"><div class="t">Visit the Live For Ads website</div><div class="s">This site — one-time</div></div>
-        <div class="pts-chip">+50 pts</div>
+        <div class="pts-chip">+50 AP</div>
       </div>
       <div class="task-row reveal">
         <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 3v5h5M6 3h8l6 6v12H6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
         <div class="info"><div class="t">Read the whitepaper (PDF)</div><div class="s">One-time</div></div>
-        <div class="pts-chip">+50 pts</div>
+        <div class="pts-chip">+50 AP</div>
       </div>
     </div>
   </section>
@@ -284,6 +327,10 @@
         <a href="whitepaper.pdf" target="_blank" class="wp-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M14 3v5h5M6 3h8l6 6v12H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           Whitepaper
+        </a>
+        <a href="terms-and-privacy.pdf" target="_blank" class="wp-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12h6M9 16h6M9 8h2M6 3h9l3 3v15H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Terms &amp; Privacy
         </a>
       </div>
     </div>

@@ -68,3 +68,15 @@ const orbStatusDot = document.querySelector('.orb-core .status-dot');
 if (orbStatusDot) {
   orbStatusDot.classList.add('is-live');
 }
+
+// ---------- settings modal demo (marketing mockup) ----------
+document.querySelectorAll('.settings-fab').forEach(fab => {
+  fab.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const modal = fab.parentElement.querySelector('.settings-modal');
+    if (modal) modal.classList.toggle('open');
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.settings-modal.open').forEach(m => m.classList.remove('open'));
+});
