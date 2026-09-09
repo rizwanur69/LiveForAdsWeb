@@ -146,8 +146,8 @@
   <section class="section wrap reveal">
     <div class="section-head">
       <span class="kicker">Profile</span>
-      <h2>Your balances, and a settings menu for the rest</h2>
-      <p>Profile edits and app preferences now live behind a settings icon, so the top of your Profile page can show what matters most: your two balances.</p>
+      <h2>Your balances, a chart, and a settings menu for the rest</h2>
+      <p>Your avatar and name are pulled directly from Telegram — no separate profile editing. App preferences live behind a settings icon, so the top of the page can show what matters most: your two balances.</p>
     </div>
 
     <div class="profile-mock card reveal" style="padding:26px;">
@@ -155,10 +155,6 @@
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="1.6"/><path d="M19.4 13.5a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.56V19.6a2 2 0 11-4 0v-.09a1.7 1.7 0 00-1-1.55 1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.7 1.7 0 00.34-1.87 1.7 1.7 0 00-1.56-1H4.4a2 2 0 110-4h.09a1.7 1.7 0 001.55-1 1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H10.5a1.7 1.7 0 001-1.56V4.4a2 2 0 114 0v.09a1.7 1.7 0 001 1.56 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06a1.7 1.7 0 00-.34 1.87V10.5a1.7 1.7 0 001.56 1h.09a2 2 0 110 4h-.09a1.7 1.7 0 00-1.56 1z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
       </div>
       <div class="settings-modal">
-        <div class="settings-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          Edit profile
-        </div>
         <div class="settings-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           Theme
@@ -174,25 +170,74 @@
         <div class="profile-avatar-lg">A</div>
         <div>
           <div class="profile-name">Arif Hasan</div>
-          <div class="profile-handle">@arif_x · Telegram avatar (editable in Settings)</div>
+          <div class="profile-handle">@arif_x · synced from Telegram</div>
         </div>
       </div>
 
       <div class="balance-row">
-        <div class="balance-card ap">
+        <div class="balance-card ap premium">
           <div class="lbl">Total AP</div>
           <div class="amt">18,240</div>
-          <div class="balance-breakdown">Check-in 3,150 · Ads 9,400 · Tasks 2,600 · Referral 3,090</div>
         </div>
-        <div class="balance-card up">
+        <div class="balance-card up premium">
           <div class="lbl">Total UP</div>
           <div class="amt">640</div>
           <div class="sub">≈ 6.40 USDT at 100:1</div>
-          <div class="balance-breakdown">From offerwall tasks only</div>
         </div>
       </div>
+
+      <p class="muted" style="margin:22px 0 10px; font-size:0.85rem;">AP &amp; UP over the last 7 days</p>
+      <div class="building-chart">
+        <div class="bar-group"><div class="bar ap" style="height:35%;"></div><div class="bar up" style="height:12%;"></div></div>
+        <div class="bar-group"><div class="bar ap" style="height:55%;"></div><div class="bar up" style="height:8%;"></div></div>
+        <div class="bar-group"><div class="bar ap" style="height:40%;"></div><div class="bar up" style="height:20%;"></div></div>
+        <div class="bar-group"><div class="bar ap" style="height:70%;"></div><div class="bar up" style="height:5%;"></div></div>
+        <div class="bar-group"><div class="bar ap" style="height:50%;"></div><div class="bar up" style="height:30%;"></div></div>
+        <div class="bar-group"><div class="bar ap" style="height:85%;"></div><div class="bar up" style="height:10%;"></div></div>
+        <div class="bar-group"><div class="bar ap" style="height:65%;"></div><div class="bar up" style="height:15%;"></div></div>
+      </div>
+      <div class="chart-legend"><span><i class="sw ap"></i>AP</span><span><i class="sw up"></i>UP</span></div>
     </div>
+
     <p class="muted" style="margin-top:14px; font-size:0.85rem;">Stats further down still show 7-day / 30-day / all-time views, updated the moment you check in, watch an ad, or finish a task.</p>
+
+    <div class="notebox" style="margin-top:24px;">
+      <strong>Withdrawals live on their own page.</strong> It isn't in the main navigation — you reach it only through the Withdraw button on Profile, below.
+    </div>
+
+    <div class="withdraw-cta reveal" style="margin-top:16px;">
+      <div>
+        <h3>Withdraw</h3>
+        <p>Convert AP and UP toward a USDT payout, on the bi-monthly schedule described below.</p>
+      </div>
+      <a href="withdraw.html" class="btn btn-primary">Open Withdraw</a>
+    </div>
+
+    <div class="section-head" style="margin-top:52px;">
+      <span class="kicker">Transparency</span>
+      <h2>Season payouts, in the open</h2>
+      <p>Every season gets its own public payout box on Profile — the same totals used to calculate everyone's share.</p>
+    </div>
+    <div class="payout-box reveal">
+      <div class="payout-head">
+        <span class="season-name">Season 0 — Nov · Dec</span>
+        <svg class="payout-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="payout-grid">
+        <div class="payout-cell"><div class="l">Participants</div><div class="v">4,812</div></div>
+        <div class="payout-cell"><div class="l">Total AP</div><div class="v ap">38.2M</div></div>
+        <div class="payout-cell"><div class="l">AP Allocation</div><div class="v">$4,900</div></div>
+        <div class="payout-cell"><div class="l">Total UP</div><div class="v up">61,400</div></div>
+        <div class="payout-cell"><div class="l">UP → USDT</div><div class="v up">$614</div></div>
+        <div class="payout-cell"><div class="l">Total paid</div><div class="v">$5,514 USDT</div></div>
+      </div>
+      <div class="payout-detail">
+        <div class="payout-row"><span>@arif_x</span><span class="addr">Fk3aP&hellip;9mQ2Z</span><span class="amt">$18.40</span></div>
+        <div class="payout-row"><span>@nusrat22</span><span class="addr">7bXcT&hellip;k1LpR</span><span class="amt">$14.05</span></div>
+        <div class="payout-row"><span>@fahim_h</span><span class="addr">2qWsA&hellip;7vNdE</span><span class="amt">$9.80</span></div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:0.82rem;">Tap a season box to expand the paid list — usernames and a masked wallet address (first and last 5 characters only), with the total USDT they withdrew that season.</p>
   </section>
 
   <!-- SEASON SYSTEM -->
@@ -220,24 +265,34 @@
       <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg></div>
         <h3>Withdrawal window</h3>
-        <p>Switched on per season by the admin — typically the 1st–2nd of the month after a season ends.</p>
+        <p>Opens the 1st of the month at 6:00 AM UTC, closes the 2nd at 11:59 PM UTC — once every two months.</p>
       </div>
       <div class="card reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Review period</h3>
-        <p>Requests are manually reviewed and approved, typically the 3rd–5th.</p>
+        <p>Requests are manually reviewed and approved after the window closes.</p>
       </div>
       <div class="card green reveal">
         <div class="icn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M9 12h6M12 9v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <h3>Payout method</h3>
-        <p>USDT, sent manually via BEP20 or Polygon to your submitted wallet address.</p>
+        <p>USDT, sent to your submitted wallet address on Polygon or opBNB.</p>
       </div>
     </div>
-    <div class="notebox" style="margin-top:24px;">
-      <strong>The withdraw form is always visible, but stays off until a season closes.</strong> You'll see the withdrawal box on your Profile at all times, but it won't accept a wallet address until the admin switches it on for that season. Once it's live, the in-app message updates to show exactly which season's payout window is open and its dates — set per season from the admin panel, not a fixed monthly date.
+
+    <div class="tbl-wrap" style="margin-top:24px;"><table class="tbl">
+      <tr><th>Window</th><th>Opens</th><th>Closes</th></tr>
+      <tr><td>Season 0 payout</td><td>Nov 1, 6:00 AM UTC</td><td>Nov 2, 11:59 PM UTC</td></tr>
+      <tr><td>Next window</td><td>Jan 1, 6:00 AM UTC</td><td>Jan 2, 11:59 PM UTC</td></tr>
+    </table></div>
+
+    <div class="notebox" style="margin-top:16px;">
+      <strong>The wallet-address box is visible year-round, but only accepts submissions during the window above.</strong> Outside those two days, the box is shown transparently on the Withdraw page but clicking submit won't do anything — it activates automatically once the window opens, and locks again the moment it closes.
     </div>
     <div class="notebox" style="margin-top:16px;">
-      <strong>No fixed conversion rate.</strong> Payout amount comes from that season's allocation calculation — not a pre-set point-to-dollar ratio.
+      <strong>How AP converts to USDT.</strong> That season's total ad revenue is divided by the community's combined AP, giving a USDT-per-AP rate. Multiply that rate by your own AP, and that's your AP allocation. Until that season's revenue figure is finalized, this shows as $0.
+    </div>
+    <div class="notebox" style="margin-top:16px;">
+      <strong>UP converts separately.</strong> A swap section on the Withdraw page lets you convert some or all of your UP to USDT at the fixed 100:1 rate (with a Max button), and it's added to your AP allocation for one combined withdrawal amount.
     </div>
   </section>
 
@@ -250,9 +305,9 @@
     </div>
     <div class="grid grid-2">
       <div class="card reveal"><h3>Persistent identity</h3><p>Progress is tied permanently to your Telegram ID.</p></div>
-      <div class="card reveal"><h3>Referral eligibility threshold</h3><p>A referred account must reach 25 watched ads before it counts.</p></div>
+      <div class="card reveal"><h3>Referral eligibility threshold</h3><p>A referred account needs 100 watched ads and 7 check-in days before it counts.</p></div>
       <div class="card reveal"><h3>Streak-break penalty</h3><p>Miss a check-in day and your streak resets to 10 points — steady beats bursty.</p></div>
-      <div class="card reveal"><h3>Manual approval</h3><p>Every payout is reviewed by the admin before funds are sent.</p></div>
+      <div class="card reveal"><h3>Manual approval</h3><p>Every payout is reviewed before funds are sent.</p></div>
     </div>
   </section>
 

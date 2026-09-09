@@ -130,6 +130,21 @@
       <h2>A daily check-in that actually rewards showing up</h2>
       <p>A streak box sits right on Home. One tap claims the day's points — miss a day, and the streak resets.</p>
     </div>
+
+    <div class="home-topbar reveal">
+      <div class="home-who">
+        <div class="home-avatar">A</div>
+        <div>
+          <div class="home-name">Arif Hasan</div>
+          <div class="home-handle">@arif_x</div>
+        </div>
+      </div>
+      <div class="home-balances">
+        <div class="mini-balance ap"><span class="l">AP</span><span class="v">18,240</span></div>
+        <div class="mini-balance up"><span class="l">UP</span><span class="v">640</span></div>
+      </div>
+    </div>
+
     <div class="streak-box reveal">
       <div class="streak-top">
         <div>
@@ -160,88 +175,129 @@
     <div class="section-head">
       <span class="kicker">Renamed: Ads → Earn</span>
       <h2>Two ways to earn on one page</h2>
-      <p>The Earn tab splits into two sections — each paying out in a different currency, because ad revenue and offerwall payouts work differently under the hood.</p>
+      <p>Tap into either section — each pays out in a different currency, because ad revenue and offerwall payouts work differently under the hood.</p>
     </div>
 
-    <div class="currency-note">
-      <span class="pt-chip up"><span class="dot"></span>UP — USD Points</span>
-      <span class="pt-chip ap"><span class="dot"></span>AP — Ad Points</span>
+    <div class="tab-switch">
+      <button type="button" class="active up-active" data-tab="offerwall" data-tab-color="up">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v10M9 9.5h4.5a1.5 1.5 0 010 3H9.5a1.5 1.5 0 000 3H15" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Reward Wall
+      </button>
+      <button type="button" data-tab="ads" data-tab-color="ap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
+        Ads
+      </button>
     </div>
 
-    <!-- OFFERWALL / UP -->
-    <div class="earn-section offerwall reveal">
-      <div class="earn-section-head">
-        <div>
-          <h3>Section 1 — Offerwall</h3>
-          <p>Cash-accurate tasks from offerwall partners. Each one pays an exact USD amount, shown as UP.</p>
+    <div data-tab-panels>
+      <!-- OFFERWALL / UP -->
+      <div class="tab-panel active" data-panel="offerwall">
+        <div class="earn-section offerwall reveal">
+          <div class="earn-section-head">
+            <div>
+              <h3>Reward Wall — Offerwall tasks</h3>
+              <p>Cash-accurate tasks from offerwall partners. Each one pays an exact USD amount, shown as UP.</p>
+            </div>
+            <span class="pt-chip up"><span class="dot"></span>Pays in UP</span>
+          </div>
+          <div class="grid grid-3">
+            <div class="ad-slot premium-box reveal" style="text-align:left; padding:14px 16px;">
+              <div class="name" style="margin-bottom:8px;">Install &amp; try app</div>
+              <div class="pts" style="color:var(--teal);">+20 UP</div>
+            </div>
+            <div class="ad-slot premium-box reveal" style="text-align:left; padding:14px 16px;">
+              <div class="name" style="margin-bottom:8px;">Complete survey</div>
+              <div class="pts" style="color:var(--teal);">+35 UP</div>
+            </div>
+            <div class="ad-slot premium-box reveal" style="text-align:left; padding:14px 16px;">
+              <div class="name" style="margin-bottom:8px;">Sign up offer</div>
+              <div class="pts" style="color:var(--teal);">+50 UP</div>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:14px; margin-bottom:0; font-size:0.84rem;">100 UP = 1 USDT — a fixed, exact rate, since offerwall partners pay a known dollar amount per completed task.</p>
         </div>
-        <span class="pt-chip up"><span class="dot"></span>Pays in UP</span>
       </div>
-      <div class="grid grid-3">
-        <div class="ad-slot reveal" style="text-align:left; padding:14px 16px;">
-          <div class="name" style="margin-bottom:8px;">Install &amp; try app</div>
-          <div class="pts" style="color:var(--teal);">+20 UP</div>
-        </div>
-        <div class="ad-slot reveal" style="text-align:left; padding:14px 16px;">
-          <div class="name" style="margin-bottom:8px;">Complete survey</div>
-          <div class="pts" style="color:var(--teal);">+35 UP</div>
-        </div>
-        <div class="ad-slot reveal" style="text-align:left; padding:14px 16px;">
-          <div class="name" style="margin-bottom:8px;">Sign up offer</div>
-          <div class="pts" style="color:var(--teal);">+50 UP</div>
-        </div>
-      </div>
-      <p class="muted" style="margin-top:14px; margin-bottom:0; font-size:0.84rem;">100 UP = 1 USDT — a fixed, exact rate, since offerwall partners pay a known dollar amount per completed task.</p>
-    </div>
 
-    <!-- SPONSOR ADS / AP -->
-    <div class="earn-section sponsor reveal">
-      <div class="earn-section-head">
-        <div>
-          <h3>Section 2 — Sponsor Ads</h3>
-          <p>4–8 rewarded video slots. Ad revenue varies, so this pool gets split across the community by AP share.</p>
+      <!-- SPONSOR ADS / AP -->
+      <div class="tab-panel" data-panel="ads">
+        <div class="earn-section sponsor reveal">
+          <div class="earn-section-head">
+            <div>
+              <h3>Ads — Sponsor video slots</h3>
+              <p>5 rewarded-video slots per batch. Watch all 5 and the batch cools down for 3 hours before refilling.</p>
+            </div>
+            <span class="pt-chip ap"><span class="dot"></span>Pays in AP</span>
+          </div>
+          <div class="ad-slots" style="grid-template-columns:repeat(5,1fr); margin-bottom:10px;">
+            <div class="ad-slot done reveal">
+              <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="name">Sponsor A</div>
+              <div class="pts">+50 AP</div>
+            </div>
+            <div class="ad-slot done reveal">
+              <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="name">Sponsor B</div>
+              <div class="pts">+50 AP</div>
+            </div>
+            <div class="ad-slot done reveal">
+              <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="name">Sponsor C</div>
+              <div class="pts">+50 AP</div>
+            </div>
+            <div class="ad-slot done reveal">
+              <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="name">Sponsor D</div>
+              <div class="pts">+50 AP</div>
+            </div>
+            <div class="ad-slot done reveal">
+              <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="name">Sponsor E</div>
+              <div class="pts">+50 AP</div>
+              <button class="watch-btn cooling" type="button" data-cooldown="10796">03:59:56</button>
+            </div>
+          </div>
+          <p class="muted" style="margin:0 0 20px; font-size:0.82rem;">5/5 watched — next batch unlocks when the countdown above hits zero.</p>
+
+          <button type="button" class="btn btn-primary" data-open-ad-popup style="margin-bottom:20px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
+            Preview: watch an ad
+          </button>
+
+          <div class="card premium-box" style="padding:20px 24px;">
+            <div class="stat-row">
+              <span class="co">Sponsor A</span>
+              <div class="track"><div class="progress-track"><div class="progress-fill fill-high" style="width:100%;"></div></div></div>
+            </div>
+            <div class="stat-row">
+              <span class="co">Sponsor B</span>
+              <div class="track"><div class="progress-track"><div class="progress-fill fill-high" style="width:100%;"></div></div></div>
+            </div>
+            <div class="stat-row">
+              <span class="co">Sponsor C</span>
+              <div class="track"><div class="progress-track"><div class="progress-fill fill-mid" style="width:60%;"></div></div></div>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:14px; margin-bottom:0; font-size:0.84rem;">AP has no fixed rate — each season's ad revenue is pooled and divided across every user's AP share.</p>
         </div>
-        <span class="pt-chip ap"><span class="dot"></span>Pays in AP</span>
       </div>
-      <div class="ad-slots" style="margin-bottom:20px;">
-        <div class="ad-slot reveal">
-          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-          <div class="name">Sponsor A</div>
-          <div class="pts">+50 AP</div>
-        </div>
-        <div class="ad-slot reveal">
-          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-          <div class="name">Sponsor B</div>
-          <div class="pts">+50 AP</div>
-        </div>
-        <div class="ad-slot reveal">
-          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-          <div class="name">Sponsor C</div>
-          <div class="pts">+50 AP</div>
-        </div>
-        <div class="ad-slot reveal">
-          <div class="icn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></div>
-          <div class="name">Sponsor D</div>
-          <div class="pts">+50 AP</div>
-        </div>
-      </div>
-      <div class="card" style="padding:20px 24px;">
-        <div class="stat-row">
-          <span class="co">Sponsor A</span>
-          <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:75%;"></div></div></div>
-        </div>
-        <div class="stat-row">
-          <span class="co">Sponsor B</span>
-          <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:40%;"></div></div></div>
-        </div>
-        <div class="stat-row">
-          <span class="co">Sponsor C</span>
-          <div class="track"><div class="progress-track"><div class="progress-fill fill-blue" style="width:15%;"></div></div></div>
-        </div>
-      </div>
-      <p class="muted" style="margin-top:14px; margin-bottom:0; font-size:0.84rem;">AP has no fixed rate — each season's ad revenue is pooled and divided across every user's AP share.</p>
     </div>
   </section>
+
+  <!-- AD NETWORK POPUP MOCK -->
+  <div class="ad-popup-overlay">
+    <div class="ad-popup">
+      <div class="ad-popup-screen">
+        <div class="ad-popup-timer">0:14</div>
+        <div class="netlogo">▶ Adsgram</div>
+        <p style="font-size:0.8rem; margin:0;">Rewarded video playing…</p>
+      </div>
+      <div class="ad-popup-foot">
+        <p>Watch the full 14 seconds to earn 50 AP. Closing early won't count the view.</p>
+        <button type="button" class="btn btn-ghost" data-close-ad-popup>Close preview</button>
+      </div>
+    </div>
+  </div>
+
 
   <!-- TASKS -->
   <section class="section wrap reveal">
@@ -285,7 +341,7 @@
       <div class="flow-step">
         <div class="num">2</div>
         <h4>Refer friends</h4>
-        <p>Invite people. Once they hit 25 watched ads, you earn a bonus plus ongoing commission.</p>
+        <p>Invite people. Once they hit 100 watched ads and 7 check-in days, you earn a 100 AP bonus plus ongoing commission.</p>
       </div>
       <div class="flow-step">
         <div class="num">3</div>
