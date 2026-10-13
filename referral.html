@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Referral program · Live For Ads</title>
+<meta name="description" content="Earn 100 AP when a friend becomes eligible plus 10% ongoing commission. See eligibility rules and estimate your referral income.">
+<meta name="theme-color" content="#0b1715">
+<meta property="og:title" content="Referral program · Live For Ads">
+<meta property="og:description" content="Earn 100 AP when a friend becomes eligible plus 10% ongoing commission. See eligibility rules and estimate your referral income.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="referral">
+
+<section class="phero"><div class="wrap hero-load">
+<span class="crumb">Referral</span>
+<h1>Invite friends who actually stay</h1>
+<p class="lead">Referrals reward lasting activity, not sign-ups. Your friend must earn their place, and you earn from them for as long as they do.</p>
+</div></section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="grid g3">
+    <div class="card rv"><span class="chip mute">Eligibility</span><h3 style="margin-top:14px">100 ads + 7 check-in days</h3><p>Both must be met. The 7 days are total days checked in, not a running streak, so they can be spread out.</p></div>
+    <div class="card rv"><span class="chip ap">One-time bonus</span><h3 style="margin-top:14px">100 AP</h3><p>Credited once, the moment your referral becomes eligible.</p></div>
+    <div class="card rv"><span class="chip ap">Ongoing</span><h3 style="margin-top:14px">10% commission</h3><p>Of your referral's AP, for as long as they stay active. Always AP, never UP.</p></div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>What your Referral page looks like</h2>
+  <p>Each person gets a name, progress lines, a Pending or Eligible badge and a colour bar that moves from deep red through orange to deep green. These are sample users.</p></div>
+  <div class="ref" id="ref-list"></div>
+  <p class="note rv">The commission figures above are illustrative. In the app, the box in the middle of each entry shows the real total commission from that person, separate from the 100 AP bonus. A summary bar under your link totals Referred, Eligible and AP Earned.</p>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Estimate your referral income</h2></div>
+  <div class="calc">
+    <div class="card controls rv">
+      <div class="field"><label for="rf-n">Eligible referrals <b id="o-n"></b></label><input class="g" id="rf-n" type="range" min="1" max="100" step="1" value="10"></div>
+      <div class="field"><label for="rf-a">AP each referral earns <b id="o-a"></b></label><input class="g" id="rf-a" type="range" min="500" max="20000" step="100" value="4000"></div>
+      <button class="btn btn-g btn-s" id="copy-link" style="justify-self:start">Copy invite text</button>
+    </div>
+    <div class="card result rv"><small>Total referral AP</small><div class="num ap" id="r-tot">0</div><hr><div class="row"><span>Eligibility bonuses (100 AP each)</span><b id="r-bonus"></b></div><div class="row"><span>10% commission</span><b id="r-com"></b></div></div>
+  </div>
+  <p class="note rv">An example only. Real earnings depend on how active your referrals stay.</p>
+</div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="cta-in rv">
+<h2>Share your link</h2><p class="lead">Your referral link lives in the Referral tab of the Mini App.</p>
+<a class="btn btn-p" id="cta-btn" href="#" target="_blank" rel="noopener">Open in Telegram</a>
+</div></div></section>
+<script>document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("cta-btn");if(b&&window.LFA_SITE)b.href=window.LFA_SITE.telegramApp;});</script>
+
+<script src="data/site.js"></script>
+<script src="data/leaderboard.js"></script>
+<script src="data/seasons.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ad-to-Earn on Telegram · Live For Ads</title>
+<meta name="description" content="Live For Ads is an ad-to-earn Telegram Mini App. Check in, watch ads, complete tasks and refer friends to earn a share of real ad revenue every season.">
+<meta name="theme-color" content="#0b1715">
+<meta property="og:title" content="Ad-to-Earn on Telegram · Live For Ads">
+<meta property="og:description" content="Live For Ads is an ad-to-earn Telegram Mini App. Check in, watch ads, complete tasks and refer friends to earn a share of real ad revenue every season.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<section class="hero">
+<canvas id="coins"></canvas>
+<div class="wrap hero-grid">
+  <div class="hero-load">
+    <span class="tag"><span class="dot"></span>Testing Season is live inside Telegram</span>
+    <h1>Ads make money.<br>Now you get a share.</h1>
+    <p class="lead">Live For Ads is a Telegram Mini App. Check in daily, watch ads, finish light tasks and invite friends. Every two months, real advertising revenue is pooled and paid back to the community in USDT.</p>
+    <div class="hero-cta">
+      <a class="btn btn-p" id="hero-tg" href="#" target="_blank" rel="noopener">Open in Telegram</a>
+      <a class="btn btn-g" href="earn.html">See how you earn</a>
+    </div>
+    <div class="hero-facts">
+      <div><b class="ap">50 AP</b><span>per ad watched</span></div>
+      <div><b class="up">100 UP = 1 USDT</b><span>fixed offerwall rate</span></div>
+      <div><b>10%</b><span>ongoing referral commission</span></div>
+      <div><b>2 months</b><span>per payout season</span></div>
+    </div>
+  </div>
+
+  <div class="phone-stage">
+    <div class="phone"><div class="phone-screen">
+      <div class="p-top"><b>Live For Ads</b><span>🔥 7-day streak</span></div>
+      <div class="p-bal">
+        <div class="a"><small>Total AP</small><b class="ap"><span id="ph-ap">2,450</span></b></div>
+        <div class="u"><small>Total UP</small><b class="up"><span id="ph-up">340</span></b></div>
+      </div>
+      <div class="p-week"><span class="d">10</span><span class="d">15</span><span class="d">20</span><span class="d">25</span><span class="d">30</span><span class="d">35</span><span class="t">40</span></div>
+      <div class="p-top" style="padding-top:2px"><span>Top of the leaderboard</span></div>
+      <div class="p-list" id="phone-list"></div>
+      <div class="p-nav"><span>Home</span><span>Earn</span><span class="on">Leaders</span><span>Referral</span><span>LFA</span><span>Profile</span></div>
+    </div></div>
+    <div class="float-chip fc1"><span class="chip ap">+50 AP</span><span>Ad watched</span></div>
+    <div class="float-chip fc2"><b class="up">$0.20</b><span>= 20 UP, exact</span></div>
+    <div class="float-chip fc3"><span>🔥</span><span>Streak keeps rising</span></div>
+  </div>
+</div>
+</section>
+<script>document.addEventListener("DOMContentLoaded",function(){document.getElementById("hero-tg").href=window.LFA_SITE.telegramApp;});</script>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Daily check-in</span><span>Sponsor ads</span><span>Reward Wall</span><span>Daily tasks</span><span>Referral commission</span><span>Season payouts</span><span>USDT on Polygon &amp; opBNB</span><span>Manual verification</span>
+  <span>Daily check-in</span><span>Sponsor ads</span><span>Reward Wall</span><span>Daily tasks</span><span>Referral commission</span><span>Season payouts</span><span>USDT on Polygon &amp; opBNB</span><span>Manual verification</span>
+</div></div>
+
+<section>
+<div class="wrap">
+  <div class="sec-head rv"><h2>From first tap to payout in four steps</h2>
+  <p>No download and no new account. The app runs inside Telegram and uses the identity you already have.</p></div>
+  <div class="steps">
+    <div class="card step rv"><h3>Open the Mini App</h3><p>Launch it from Telegram. Your name and avatar come straight from your account.</p></div>
+    <div class="card step rv"><h3>Earn every day</h3><p>Claim your check-in, watch 14-second ads, tick off tasks and try Reward Wall offers.</p></div>
+    <div class="card step rv"><h3>Climb the leaderboard</h3><p>AP decides your rank among the top 100. Your streak shows next to your name.</p></div>
+    <div class="card step rv"><h3>Withdraw your share</h3><p>When the two-day window opens, submit a wallet and receive USDT after review.</p></div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Two currencies, because they are funded differently</h2>
+  <p>Sponsor ads pay out of a shared pool whose size changes every season. Offerwall partners pay a known dollar amount per task. So the app tracks each one on its own.</p></div>
+  <div class="duo">
+    <div class="card a rv"><span class="chip ap">AP · Ad Points</span>
+      <div class="big ap" style="margin-top:20px">Pooled</div>
+      <p>Earned from check-ins, sponsor ads, tasks and referral commission. Its dollar value depends on that season's ad revenue.</p>
+      <dl class="dl"><div><dt>Value</dt><dd>Variable each season</dd></div><div><dt>Counts toward</dt><dd>Leaderboard rank &amp; payout pool</dd></div></dl>
+    </div>
+    <div class="card u rv"><span class="chip up">UP · USD Points</span>
+      <div class="big up" style="margin-top:20px">Fixed</div>
+      <p>Earned only on the Reward Wall. Every offer pays an exact dollar amount, so 100 UP is always 1 USDT.</p>
+      <dl class="dl"><div><dt>Value</dt><dd>100 UP = 1 USDT</dd></div><div><dt>Counts toward</dt><dd>Its own USDT balance</dd></div></dl>
+    </div>
+  </div>
+  <p class="center rv" style="margin:30px auto 0"><a class="btn btn-g" href="points.html">Compare AP and UP in detail</a></p>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Your payout is your slice of the season</h2>
+  <p>AP has no fixed price. Once a season closes, its ad revenue is divided by everyone's combined AP. Multiply that rate by your own AP and you have your allocation.</p></div>
+  <div class="formula rv"><span>Season ad revenue</span><i>÷</i><span>Total community AP</span><i>×</i><span>Your AP</span><i>=</i><span class="ap">Your USDT</span></div>
+  <p class="center rv" style="margin:30px auto 0"><a class="btn btn-p" href="points.html#calculator">Try the payout calculator</a></p>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Every way to earn, in one place</h2></div>
+  <div class="grid g3">
+    <div class="card rv"><span class="chip ap">AP</span><h3 style="margin-top:14px">Daily check-in</h3><p>10 AP on day one, then +5 AP more each consecutive day. Miss one and it starts again at 10.</p></div>
+    <div class="card rv"><span class="chip ap">AP</span><h3 style="margin-top:14px">Sponsor ads</h3><p>Five rewarded videos per batch, 50 AP each, then a 3-hour cooldown that counts down on the button.</p></div>
+    <div class="card rv"><span class="chip ap">AP</span><h3 style="margin-top:14px">Daily tasks</h3><p>Subscribe, visit, read. 50 AP per task with a daily counter that resets at 00:00 UTC.</p></div>
+    <div class="card rv"><span class="chip ap">AP</span><h3 style="margin-top:14px">Referrals</h3><p>100 AP when a friend becomes eligible, plus 10% of their AP for as long as they stay active.</p></div>
+    <div class="card rv"><span class="chip up">UP</span><h3 style="margin-top:14px">Reward Wall</h3><p>Install an app, finish a survey, sign up for an offer. A $0.20 offer pays exactly 20 UP.</p></div>
+    <div class="card rv" style="display:grid;align-content:center;text-align:center"><h3>See it work</h3><p style="margin:0 auto 18px">Try the streak and ad simulators.</p><a class="btn btn-g" style="justify-self:center" href="earn.html">Open the simulators</a></div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>The season calendar</h2>
+  <p>A payout pool is calculated once every two months, covering the full season's ad revenue and community AP together.</p></div>
+  <div class="tl">
+    <div class="tl-item live rv"><div class="card"><div class="when"><span class="chip up"><span class="dot"></span>Live now</span><span class="chip mute">September – October</span></div><h3>Testing Season</h3><p>Streaks, the Earn page, tasks and the leaderboard run for feedback and bug fixes.</p></div></div>
+    <div class="tl-item rv"><div class="card"><div class="when"><span class="chip mute">November – December</span></div><h3>Season 0</h3><p>The first live season and the first AP pool distribution.</p></div></div>
+    <div class="tl-item rv"><div class="card"><div class="when"><span class="chip mute">January onward</span></div><h3>Season 1 and beyond</h3><p>Full public rollout and a community growth push.</p></div></div>
+  </div>
+  <p class="rv" style="margin-top:30px"><a class="btn btn-g" href="seasons.html">Open payouts and withdrawal window</a></p>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Built to reward real people</h2>
+  <p>The model is manually verified and designed so that steady, genuine activity beats automated or fraudulent farming.</p></div>
+  <div class="grid g3">
+    <div class="card rv"><h3>Tied to your Telegram ID</h3><p>Progress belongs to your identity, not to a device or a session.</p></div>
+    <div class="card rv"><h3>Full-length ad views</h3><p>An ad only counts if you watch all 14 seconds. Close it early and nothing is paid.</p></div>
+    <div class="card rv"><h3>Streak-break reset</h3><p>Missing a day resets the streak, which favours steady habits over bursts of farming.</p></div>
+    <div class="card rv"><h3>Higher referral bar</h3><p>A referral counts after 100 ads and 7 check-in days, not on sign-up alone.</p></div>
+    <div class="card rv"><h3>Manual withdrawal approval</h3><p>Every payout is reviewed by the team before any funds are sent.</p></div>
+    <div class="card rv"><h3>Public payout records</h3><p>Each season's totals and paid list are published, with wallets partly masked.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="cta-in rv">
+<h2>Start with today's check-in</h2><p class="lead">It takes one tap. Your streak begins the moment you claim it.</p>
+<a class="btn btn-p" id="cta-btn" href="#" target="_blank" rel="noopener">Open in Telegram</a>
+</div></div></section>
+<script>document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("cta-btn");if(b&&window.LFA_SITE)b.href=window.LFA_SITE.telegramApp;});</script>
+
+<script src="data/site.js"></script>
+<script src="data/leaderboard.js"></script>
+<script src="data/seasons.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

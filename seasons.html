@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seasons & payouts · Live For Ads</title>
+<meta name="description" content="Season calendar, the two-day withdrawal window with countdown, and public payout summaries for every Live For Ads season.">
+<meta name="theme-color" content="#0b1715">
+<meta property="og:title" content="Seasons & payouts · Live For Ads">
+<meta property="og:description" content="Season calendar, the two-day withdrawal window with countdown, and public payout summaries for every Live For Ads season.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="seasons">
+
+<section class="phero"><div class="wrap hero-load">
+<span class="crumb">Seasons & payouts</span>
+<h1>Every season is paid in the open</h1>
+<p class="lead">A pool is calculated once every two months. Each season gets a public summary: who took part, how much was shared, and who was paid.</p>
+</div></section>
+
+<section id="withdraw" style="padding-top:0">
+<div class="wrap">
+  <div class="calc">
+    <div class="card rv" style="padding:38px">
+      <span class="chip up"><span class="dot"></span>Next withdrawal window</span>
+      <h2 style="margin:18px 0 8px" id="cd-label">Opens in</h2>
+      <div class="cd" style="margin:22px 0">
+        <div><b id="cd-d">0</b><small>days</small></div><div><b id="cd-h">00</b><small>hours</small></div><div><b id="cd-m">00</b><small>minutes</small></div><div><b id="cd-s">00</b><small>seconds</small></div>
+      </div>
+      <p>The wallet box on the Withdraw page is visible all year, but it only accepts a submission during a two-day window that recurs every two months.</p>
+    </div>
+    <div class="card rv">
+      <h3>The window</h3>
+      <dl class="dl"><div><dt>Opens</dt><dd>1st of the month, 6:00 AM UTC</dd></div><div><dt>Closes</dt><dd>2nd of the month, 11:59 PM UTC</dd></div><div><dt>Season 0 example</dt><dd>Nov 1 – Nov 2</dd></div><div><dt>Following window</dt><dd>Jan 1 – Jan 2</dd></div></dl>
+    </div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>How a payout is built</h2></div>
+  <div class="steps">
+    <div class="card step rv"><h3>Season closes</h3><p>Ad revenue for the whole season is finalised, so the AP allocation shows $0.00 until then.</p></div>
+    <div class="card step rv"><h3>Window opens</h3><p>Submit a USDT wallet address on Polygon or opBNB during the two days.</p></div>
+    <div class="card step rv"><h3>Manual review</h3><p>Requests are reviewed and approved by the team after the window closes.</p></div>
+    <div class="card step rv"><h3>USDT is sent</h3><p>Funds go to your wallet. The season's summary is then published below.</p></div>
+  </div>
+  <div class="formula rv" style="margin-top:36px"><span>Season ad revenue</span><i>÷</i><span>Total community AP</span><i>×</i><span>Your AP</span><i>=</i><span class="ap">AP allocation</span><i>+</i><span class="up">UP ÷ 100</span></div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Season payout records</h2>
+  <p>Open a season to see its totals. Paid lists show usernames with wallets masked to the first and last 5 characters.</p></div>
+  <div id="season-list" style="display:grid;gap:16px"></div>
+</div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="cta-in rv">
+<h2>Be in the next pool</h2><p class="lead">Your AP at the end of the season decides your slice. Every check-in counts.</p>
+<a class="btn btn-p" id="cta-btn" href="#" target="_blank" rel="noopener">Open in Telegram</a>
+</div></div></section>
+<script>document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("cta-btn");if(b&&window.LFA_SITE)b.href=window.LFA_SITE.telegramApp;});</script>
+
+<script src="data/site.js"></script>
+<script src="data/leaderboard.js"></script>
+<script src="data/seasons.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

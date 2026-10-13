@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to earn · Live For Ads</title>
+<meta name="description" content="Daily check-in streaks, sponsor ads, tasks, referrals and the Reward Wall. Try interactive simulators of every way to earn AP and UP.">
+<meta name="theme-color" content="#0b1715">
+<meta property="og:title" content="How to earn · Live For Ads">
+<meta property="og:description" content="Daily check-in streaks, sponsor ads, tasks, referrals and the Reward Wall. Try interactive simulators of every way to earn AP and UP.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="earn">
+
+<section class="phero"><div class="wrap hero-load">
+<span class="crumb">Earn</span>
+<h1>Five ways to earn, all in one tab</h1>
+<p class="lead">Try the real mechanics below. The streak and the ad batch behave exactly like the Mini App, only faster.</p>
+</div></section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><span class="chip ap" style="justify-self:start">Pays AP</span><h2>Daily check-in streak</h2>
+  <p>The week runs Monday to Sunday. One tap claims the day instantly. Day one pays 10 AP and every following day adds 5 AP. Tap a day below to claim it, or skip ahead to see what a missed day costs.</p></div>
+  <div class="card rv">
+    <div class="week" id="week"></div>
+    <div class="streak-bar">
+      <span class="chip ap">Week total: <b id="st-total">0</b> AP</span>
+      <span class="chip hot">🔥 Streak: <b id="st-streak">0</b></span>
+      <button class="btn btn-g btn-s" id="st-perfect">Claim all 7 days</button>
+      <button class="btn btn-g btn-s" id="st-reset">Reset</button>
+    </div>
+    <p class="note">A perfect week pays 175 AP (10 + 15 + 20 + 25 + 30 + 35 + 40). Check-ins reset at 00:00 UTC, which is 6:00 AM in Bangladesh.</p>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><span class="chip ap" style="justify-self:start">Pays AP</span><h2>Sponsor ads</h2>
+  <p>Open the Ads button on the Earn page and you get five rewarded-video slots played through partner networks such as Adsgram or Monetag. Watch each one for the full 14 seconds. Press a slot to try it.</p></div>
+  <div class="calc">
+    <div class="card rv">
+      <div class="slots">
+        <button class="slot"><span class="fillbg"></span><span class="lbl"></span></button>
+        <button class="slot"><span class="fillbg"></span><span class="lbl"></span></button>
+        <button class="slot"><span class="fillbg"></span><span class="lbl"></span></button>
+        <button class="slot"><span class="fillbg"></span><span class="lbl"></span></button>
+        <button class="slot"><span class="fillbg"></span><span class="lbl"></span></button>
+      </div>
+      <div class="bar"><i id="ad-bar"></i></div>
+      <p class="note">Demo speed: 14 seconds plays in about 3, and the 3-hour cooldown runs 600 times faster. The 5th slot shows the live countdown, with no separate timer to tap.</p>
+    </div>
+    <div class="card result rv">
+      <small>AP from this demo</small>
+      <div class="num ap" id="ad-ap">0</div>
+      <hr>
+      <div class="row"><span>Points per ad</span><b>50 AP</b></div>
+      <div class="row"><span>Slots per batch</span><b>5</b></div>
+      <div class="row"><span>Full batch</span><b>250 AP</b></div>
+      <div class="row"><span>Must watch</span><b>14 s, in full</b></div>
+      <div class="row"><span>Cooldown after 5th ad</span><b>3 hours</b></div>
+    </div>
+  </div>
+  <p class="note rv">A progress bar under the slots on the real page shows how many times each company's ad has been watched.</p>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><span class="chip ap" style="justify-self:start">Pays AP</span><h2>Daily tasks</h2>
+  <p>Simple visit-style actions under the check-in box on Home. The team can add or remove tasks at any time. Progress shows as a running counter such as 0/20 across the day's task slots.</p></div>
+  <div class="grid g3">
+    <div class="card rv"><h3>Subscribe to the Telegram channel</h3><span class="chip ap">+50 AP</span></div>
+    <div class="card rv"><h3>Visit the website</h3><span class="chip ap">+50 AP</span></div>
+    <div class="card rv"><h3>View the whitepaper</h3><span class="chip ap">+50 AP</span></div>
+  </div>
+  <p class="note rv">Tasks reset daily at 00:00 UTC (6:00 AM Bangladesh time).</p>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><span class="chip up" style="justify-self:start">Pays UP</span><h2>Reward Wall</h2>
+  <p>Cash-accurate tasks from offerwall partners: install an app, finish a survey, sign up for an offer. Each pays an exact USD amount and is credited as UP at 100 UP per 1 USDT. Type an offer value to see the credit.</p></div>
+  <div class="calc">
+    <div class="card rv"><div class="field"><label for="of-in">Offer value (USD)</label>
+      <input id="of-in" type="number" min="0" step="0.01" value="0.20" style="width:100%;padding:16px 18px;border-radius:14px;border:1px solid var(--line-2);background:var(--fill);color:var(--text);font:inherit;font-size:1.3rem">
+    </div><p class="note">Gmail or Twitter verification may be required once this section goes live. It is disabled for now.</p></div>
+    <div class="card result rv"><small>You receive</small><div class="num up" id="of-out">20 UP</div><hr><div class="row"><span>Rate</span><b>100 UP = 1 USDT</b></div><div class="row"><span>Rounding</span><b>None. Exact, not estimated</b></div></div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Where each point comes from</h2></div>
+  <div class="scroll-x rv"><table class="tbl">
+    <thead><tr><th>Source</th><th>Pays</th><th>Amount</th></tr></thead>
+    <tbody>
+      <tr><td>Daily check-in</td><td><span class="chip ap">AP</span></td><td>10–40+ AP, streak based</td></tr>
+      <tr><td>Sponsor ads</td><td><span class="chip ap">AP</span></td><td>50 AP per ad watched</td></tr>
+      <tr><td>Tasks</td><td><span class="chip ap">AP</span></td><td>50 AP per completed task</td></tr>
+      <tr><td>Referrals</td><td><span class="chip ap">AP</span></td><td>100 AP bonus + 10% ongoing commission</td></tr>
+      <tr><td>Reward Wall</td><td><span class="chip up">UP</span></td><td>Exact USD value, 100 UP = 1 USDT</td></tr>
+    </tbody></table></div>
+  <p class="note rv">All points are tied permanently to your Telegram ID. UP is never earned from check-ins, ads, tasks or referrals.</p>
+</div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="cta-in rv">
+<h2>Ready for your first batch?</h2><p class="lead">Open the Mini App and claim today's streak first.</p>
+<a class="btn btn-p" id="cta-btn" target="_blank" rel="noopener" href="#">Open in Telegram</a>
+</div></div></section>
+<script>document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("cta-btn");if(b&&window.LFA_SITE)b.href=window.LFA_SITE.telegramApp;});</script>
+
+<script src="data/site.js"></script>
+<script src="data/leaderboard.js"></script>
+<script src="data/seasons.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leaderboard · Live For Ads</title>
+<meta name="description" content="Weekly top 10 snapshot of the Live For Ads leaderboard, ranked by AP and UP with streaks.">
+<meta name="theme-color" content="#0b1715">
+<meta property="og:title" content="Leaderboard · Live For Ads">
+<meta property="og:description" content="Weekly top 10 snapshot of the Live For Ads leaderboard, ranked by AP and UP with streaks.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="leaderboard">
+
+<section class="phero"><div class="wrap hero-load">
+<span class="crumb">Leaderboard</span>
+<h1>The top of the community, refreshed weekly</h1>
+<p class="lead">Rankings come from the app's own leaderboard. Each week we publish a new snapshot of the top 10 here.</p>
+</div></section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="lb-tools rv">
+    <div class="seg" id="seg"><button class="on" data-v="ap">Ranked by AP</button><button data-v="up">Ranked by UP</button></div>
+    <select class="select" id="snap" aria-label="Choose week"></select>
+  </div>
+  <div id="snap-meta" class="rv" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px"></div>
+  <div class="podium" id="podium"></div>
+  <div id="rows"></div>
+  <div class="grid g4" style="margin-top:36px">
+    <div class="card"><small class="ap">AP in this top 10</small><h3 id="k-ap"></h3></div>
+    <div class="card"><small class="up">UP in this top 10</small><h3 id="k-up"></h3></div>
+    <div class="card"><small class="up">UP in USDT</small><h3 id="k-usd"></h3></div>
+    <div class="card"><small class="ap">Longest streak</small><h3 id="k-streak"></h3></div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>How ranking works in the app</h2></div>
+  <div class="grid g3">
+    <div class="card rv"><h3>All Time</h3><p>The default view: lifetime AP, with each person's current streak next to their rank. A missed check-in resets it to 0.</p></div>
+    <div class="card rv"><h3>AP and UP views</h3><p>Two buttons switch to the current season. AP resets with each new season. UP is shown for reference and does not affect AP rank.</p></div>
+    <div class="card rv"><h3>Top 100 plus you</h3><p>Ranks 4 to 100 are listed under the podium. If you fall outside, your own rank still appears in a box beneath the list.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="cta-in rv">
+<h2>Your streak is your edge</h2><p class="lead">Consistent days beat bursts. Claim today's check-in to start climbing.</p>
+<a class="btn btn-p" id="cta-btn" href="#" target="_blank" rel="noopener">Open in Telegram</a>
+</div></div></section>
+<script>document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("cta-btn");if(b&&window.LFA_SITE)b.href=window.LFA_SITE.telegramApp;});</script>
+
+<script src="data/site.js"></script>
+<script src="data/leaderboard.js"></script>
+<script src="data/seasons.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AP & UP points · Live For Ads</title>
+<meta name="description" content="How AP (Ad Points) and UP (USD Points) work, with an interactive payout calculator and UP to USDT converter.">
+<meta name="theme-color" content="#0b1715">
+<meta property="og:title" content="AP & UP points · Live For Ads">
+<meta property="og:description" content="How AP (Ad Points) and UP (USD Points) work, with an interactive payout calculator and UP to USDT converter.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="points">
+
+<section class="phero"><div class="wrap hero-load">
+<span class="crumb">Points</span>
+<h1>AP and UP, explained with numbers</h1>
+<p class="lead">One pool that grows with the community, and one fixed rate that never moves. Here is how they work and what they are worth.</p>
+</div></section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="duo">
+    <div class="card a rv"><span class="chip ap">AP · Ad Points</span>
+      <div class="big ap" style="margin-top:20px">Variable</div>
+      <dl class="dl">
+        <div><dt>Earned from</dt><dd>Check-ins, ads, tasks, referrals</dd></div>
+        <div><dt>Value</dt><dd>Depends on season ad revenue</dd></div>
+        <div><dt>Counts toward</dt><dd>Leaderboard rank, payout pool</dd></div>
+      </dl></div>
+    <div class="card u rv"><span class="chip up">UP · USD Points</span>
+      <div class="big up" style="margin-top:20px">100 = $1</div>
+      <dl class="dl">
+        <div><dt>Earned from</dt><dd>Reward Wall only</dd></div>
+        <div><dt>Value</dt><dd>Fixed, 100 UP = 1 USDT</dd></div>
+        <div><dt>Counts toward</dt><dd>Its own USDT balance</dd></div>
+      </dl></div>
+  </div>
+</div>
+</section>
+
+<section id="calculator" style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>AP payout calculator</h2>
+  <p>Move the sliders to see how a season's revenue, the community's total AP and your own AP combine. The figures are examples to explore the formula, not forecasts.</p></div>
+  <div class="calc">
+    <div class="card controls rv">
+      <div class="field"><label for="c-rev">Season ad revenue <b id="o-rev"></b></label><input id="c-rev" type="range" min="100" max="50000" step="100" value="5000"></div>
+      <div class="field"><label for="c-tot">Total community AP <b id="o-tot"></b></label><input id="c-tot" type="range" min="100000" max="50000000" step="100000" value="5000000"></div>
+      <div class="field"><label for="c-my">Your AP <b id="o-my"></b></label><input id="c-my" type="range" min="100" max="200000" step="100" value="20000"></div>
+      <p class="note">Formula: (season ad revenue ÷ total community AP) × your AP.</p>
+    </div>
+    <div class="card result rv"><small>Your AP allocation</small><div class="num ap" id="r-out">$0</div>
+      <hr><div class="row"><span>USDT per AP</span><b id="r-rate"></b></div><div class="row"><span>USDT per 1,000 AP</span><b id="r-per1k"></b></div><div class="row"><span>Your share of the pool</span><b id="r-share"></b></div></div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>UP to USDT converter</h2>
+  <p>On the Withdraw page a swap section converts UP at the fixed rate. Max converts the whole balance in one tap, and the result is added to your AP allocation as a single combined total.</p></div>
+  <div class="calc">
+    <div class="card rv"><div class="field"><label for="u-in">UP to convert</label>
+      <input id="u-in" type="number" min="0" step="1" value="250" style="width:100%;padding:16px 18px;border-radius:14px;border:1px solid var(--line-2);background:var(--fill);color:var(--text);font:inherit;font-size:1.3rem"></div>
+      <button class="btn btn-g btn-s" id="u-max" style="margin-top:16px">Max</button></div>
+    <div class="card result rv"><small>You receive</small><div class="num up" id="u-out">$0</div><hr><div class="row"><span>Rate</span><b>100 UP = 1 USDT</b></div><div class="row"><span>Depends on season?</span><b>No</b></div></div>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+  <div class="sec-head rv"><h2>Why not one currency?</h2></div>
+  <div class="grid g2">
+    <div class="card rv"><h3>Offerwalls know the price</h3><p>A partner pays an exact dollar amount per completed task, so UP can convert at a fixed rate with no guesswork.</p></div>
+    <div class="card rv"><h3>Ad revenue moves</h3><p>Sponsor-ad income changes from season to season. Sharing the pool by each person's AP keeps the payout fair at any size.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="cta-in rv">
+<h2>Earn both, keep them separate</h2><p class="lead">Your Profile shows each balance live, with a 7-day chart of AP and UP activity.</p>
+<a class="btn btn-p" id="cta-btn" target="_blank" rel="noopener" href="#">Open in Telegram</a>
+</div></div></section>
+<script>document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("cta-btn");if(b&&window.LFA_SITE)b.href=window.LFA_SITE.telegramApp;});</script>
+
+<script src="data/site.js"></script>
+<script src="data/leaderboard.js"></script>
+<script src="data/seasons.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
