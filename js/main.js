@@ -21,7 +21,44 @@
   var SUB = { home: "Start here", earn: "Check-ins, ads, tasks", points: "AP and UP explained", leaderboard: "Weekly top 10", seasons: "Payouts and windows", referral: "Invite friends", roadmap: "What comes next", whitepaper: "The full document" };
   var LOGO = '<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#13261f" stroke="rgba(190,255,230,.2)"/><circle cx="25" cy="33" r="14" fill="#f4b43c"/><circle cx="40" cy="33" r="14" fill="#4fe3a3" fill-opacity=".9"/><path d="M25 26v14M19 33h12" stroke="#1b1300" stroke-width="3" stroke-linecap="round"/></svg>';
 
+
+  /* Navigation CSS lives here on purpose: it overrides any older cached style.css,
+     so the header and mobile menu always work. Breakpoint: 900px. */
+  var NAVCSS = [
+    'html.lock,html.lock body{overflow:hidden}',
+    '.mnav{display:none}',
+    '@media(min-width:901px){',
+    '.hdr .nav{display:flex!important;position:static!important;inset:auto!important;opacity:1!important;pointer-events:all!important;flex-direction:row!important;background:none!important;z-index:auto!important;gap:0!important}',
+    '.hdr .nav a{font-family:var(--font-b)!important;font-size:.86rem!important;padding:8px 10px!important}',
+    '.hdr .burger,.mnav{display:none!important}',
+    '}',
+    '@media(min-width:1181px){.hdr .nav a{font-size:.93rem!important;padding:8px 14px!important}.hdr .nav{gap:2px!important}}',
+    '@media(max-width:900px){',
+    '.hdr .nav{display:none!important}',
+    '.hdr .burger{display:grid!important}',
+    '.hdr-cta{display:none!important}',
+    '.mnav{display:block;position:fixed;inset:0;z-index:80;visibility:hidden;opacity:0;transition:opacity .35s cubic-bezier(.2,.8,.2,1),visibility 0s .35s}',
+    '.mnav.open{visibility:visible;opacity:1;transition:opacity .35s cubic-bezier(.2,.8,.2,1)}',
+    '.mnav::before{content:"";position:absolute;inset:0;background:radial-gradient(520px circle at 100% 0%,rgba(244,180,60,.28),transparent 60%),radial-gradient(520px circle at 0% 100%,rgba(31,191,134,.24),transparent 60%),#f4f8f6}',
+    '.mnav-in{position:absolute;inset:0;overflow-y:auto;padding:92px 7vw calc(22px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column}',
+    '.mnav nav{display:grid}',
+    '.mi{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 2px;border-bottom:1px solid rgba(16,40,30,.11);color:#10211b;text-decoration:none}',
+    '.mi span{display:grid;gap:1px}',
+    '.mi b{font-family:var(--font-d);font-size:clamp(1.45rem,6.4vw,1.85rem);font-weight:700;letter-spacing:-.03em;line-height:1.15;color:#10211b;display:flex;align-items:center;gap:12px}',
+    '.mi small{font-size:.82rem;line-height:1.35;color:#4d6258}',
+    '.mi i{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(16,40,30,.2);display:grid;place-items:center;font-style:normal;color:#4d6258;transition:.3s}',
+    '.mi:active i{background:#f4b43c;border-color:#f4b43c;color:#1b1300;transform:translateX(4px)}',
+    '.mi.on b::before{content:"";width:10px;height:10px;border-radius:50%;background:#f4b43c;box-shadow:0 0 0 5px rgba(244,180,60,.22)}',
+    '.mnav-foot{margin-top:auto;padding-top:20px;display:grid;gap:12px}',
+    '.mnav-foot .btn{justify-content:center;padding:16px 24px;font-size:1.02rem}',
+    '.mnav-foot p{text-align:center;font-size:.84rem;color:#62766c;max-width:none}',
+    '.mnav.open .mi,.mnav.open .mnav-foot{animation:mi .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 50ms + 110ms)}',
+    '@keyframes mi{from{opacity:0;transform:translateY(24px)}}',
+    '}'
+  ].join("\n");
+
   function chrome() {
+    var st = document.createElement("style"); st.id = "lfa-nav-css"; st.textContent = NAVCSS; document.head.appendChild(st);
     var b = document.body;
     b.insertAdjacentHTML("afterbegin",
       '<div class="curtain" id="curtain"><b><span></span>Live For Ads</b></div>' +
@@ -50,7 +87,7 @@
     }
     bg.addEventListener("click", function () { menu(!mn.classList.contains("open")); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") menu(false); });
-    window.addEventListener("resize", function () { if (window.innerWidth > 980) menu(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth > 900) menu(false); });
 
     // scroll progress
     var pr = $("#progress");
