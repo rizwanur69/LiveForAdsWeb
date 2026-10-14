@@ -18,6 +18,7 @@
     ["leaderboard.html", "Leaderboard", "leaderboard"], ["seasons.html", "Seasons", "seasons"],
     ["referral.html", "Referral", "referral"], ["roadmap.html", "Roadmap", "roadmap"], ["whitepaper.html", "Whitepaper", "whitepaper"]
   ];
+  var SUB = { home: "Start here", earn: "Check-ins, ads, tasks", points: "AP and UP explained", leaderboard: "Weekly top 10", seasons: "Payouts and windows", referral: "Invite friends", roadmap: "What comes next", whitepaper: "The full document" };
   var LOGO = '<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#13261f" stroke="rgba(190,255,230,.2)"/><circle cx="25" cy="33" r="14" fill="#f4b43c"/><circle cx="40" cy="33" r="14" fill="#4fe3a3" fill-opacity=".9"/><path d="M25 26v14M19 33h12" stroke="#1b1300" stroke-width="3" stroke-linecap="round"/></svg>';
 
   function chrome() {
@@ -30,6 +31,9 @@
       '<a class="btn btn-p btn-s hdr-cta" href="' + (S.telegramApp || "#") + '" target="_blank" rel="noopener">Open in Telegram</a>' +
       '<button class="burger" id="burger" aria-label="Menu"><i></i></button></div></header>');
     b.insertAdjacentHTML("beforeend",
+      '<div class="mnav" id="mnav" aria-hidden="true"><div class="mnav-in"><nav aria-label="Mobile menu">' +
+      NAV.map(function (n, i) { return '<a class="mi' + (n[2] === page ? ' on' : '') + '" style="--i:' + i + '" href="' + n[0] + '"><span><b>' + n[1] + '</b><small>' + SUB[n[2]] + '</small></span><i>›</i></a>'; }).join("") +
+      '</nav><div class="mnav-foot" style="--i:8"><a class="btn btn-p" href="' + (S.telegramApp || "#") + '" target="_blank" rel="noopener">Open in Telegram</a><p>Built for and by its community.</p></div></div></div>' +
       '<footer class="ftr"><div class="wrap"><div class="ftr-g"><div><a class="logo" href="index.html" style="padding:0">' + LOGO + 'Live For Ads</a>' +
       '<p style="margin-top:16px;font-size:.95rem">Ad-to-Earn Telegram Mini App. Built for and by its community.</p></div>' +
       '<div><h4>Product</h4><a href="earn.html">How to earn</a><a href="points.html">AP &amp; UP points</a><a href="leaderboard.html">Leaderboard</a><a href="referral.html">Referral program</a></div>' +
@@ -38,9 +42,15 @@
       '<small>Disclaimer: This website describes the intended design and mechanics of Live For Ads at its current stage. Features, point values, ratios and timelines may change. AP payouts depend on actual advertising revenue and community size; UP payouts depend on offerwall partner availability. Nothing here is financial or investment advice, and no LFA token exists yet. &copy; Live For Ads.</small></div></footer>' +
       '<div class="toast" id="toast"></div>');
 
-    // burger
-    var bg = $("#burger"), nv = $("#nav");
-    bg.addEventListener("click", function () { bg.classList.toggle("open"); nv.classList.toggle("open"); });
+    // burger + full-screen mobile menu
+    var bg = $("#burger"), mn = $("#mnav"), root = document.documentElement;
+    function menu(open) {
+      bg.classList.toggle("open", open); mn.classList.toggle("open", open); mn.setAttribute("aria-hidden", open ? "false" : "true");
+      root.classList.toggle("lock", open);
+    }
+    bg.addEventListener("click", function () { menu(!mn.classList.contains("open")); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") menu(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth > 980) menu(false); });
 
     // scroll progress
     var pr = $("#progress");
