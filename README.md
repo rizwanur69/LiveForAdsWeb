@@ -20,3 +20,10 @@ Edit `data/seasons.js`: set `status: "paid"` and fill participants, totalAp, apU
 ## Pages
 index · earn · points · leaderboard · seasons · referral · roadmap · whitepaper · faq · 404
 Shared look: `css/style.css`. Shared header/footer/animations: `js/main.js`.
+
+## Live data from the Admin Panel (auto-update)
+`data/live.js` reads the public backend API (season name, withdraw window, season payout boxes, leaderboard, notices)
+and fills the pages automatically. Nothing to edit weekly any more. If the backend is down, the static files
+(`site.js`, `seasons.js`, `leaderboard.js`) are shown instead, so keep them as a fallback.
+Options (top of `data/live.js`): `api`, `topN`, `maskNames`, `refreshMs`.
+Never put an admin token in this repo.
