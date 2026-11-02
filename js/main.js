@@ -331,7 +331,7 @@
       } else {
         body = '<div class="kpis"><div class="kpi"><small>Participants</small><b>—</b></div><div class="kpi"><small>Total AP</small><b>—</b></div><div class="kpi"><small>AP allocation</small><b>$0.00</b></div><div class="kpi"><small>Total UP</small><b>—</b></div><div class="kpi"><small>UP converted</small><b>—</b></div><div class="kpi total"><small>Total paid out</small><b>—</b></div></div><div class="empty">' + (s.status === "live" ? "This season is running. The payout summary and paid list appear here once the pool is finalised and withdrawals are approved." : "This season hasn’t started yet. Its payout summary will appear here after it closes.") + "</div>";
       }
-      return '<div class="card season rv' + (i === 2 ? " open" : "") + '"><button class="season-h" aria-expanded="false"><div><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px">' + badge + '<span class="chip mute">' + esc(s.period) + "</span></div><h3>" + esc(s.name) + '</h3><p style="font-size:.95rem">' + esc(s.note || "") + '</p></div><span class="caret">⌄</span></button><div class="season-b"><div><div class="season-in">' + body + '<p class="note">Withdrawal window: ' + esc(s.withdrawal || "—") + "</p></div></div></div></div>";
+      return '<div class="card season rv' + (s.status === "live" ? " open" : "") + '"><button class="season-h" aria-expanded="false"><div><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px">' + badge + '<span class="chip mute">' + esc(s.period) + "</span></div><h3>" + esc(s.name) + '</h3><p style="font-size:.95rem">' + esc(s.note || "") + '</p></div><span class="caret">⌄</span></button><div class="season-b"><div><div class="season-in">' + body + '<p class="note">Withdrawal window: ' + esc(s.withdrawal || "—") + "</p></div></div></div></div>";
     }).join("");
     $$(".season-h").forEach(function (h) { h.addEventListener("click", function () { h.parentNode.classList.toggle("open"); }); });
 
@@ -379,7 +379,15 @@
   }
 
   /* ---------- boot ---------- */
+  function boot() {
   chrome();
   ({ home: home, earn: earn, points: points, leaderboard: leaderboard, seasons: seasons, referral: referral, whitepaper: whitepaper }[page] || function () {})();
   ranges(); faq(); counters(); reveal();
+  }
+  // Wait up to 4s for data/live.js (backend data). If the backend is still waking up, show the
+  // static data now; live.js then reloads the page once as soon as the live data arrives.
+  var needsLive = { home: 1, leaderboard: 1, seasons: 1 }[page];
+  var started = false;
+  function go(late) { if (started) return; started = true; if (late === "timeout") window.LFA_STATIC_BOOT = true; boot(); }
+  if (!needsLive || !window.LFA_READY) go(); else { window.LFA_READY.then(function () { go(); }, function () { go(); }); setTimeout(function () { go("timeout"); }, 4000); }
 })();
