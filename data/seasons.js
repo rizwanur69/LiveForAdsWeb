@@ -11,10 +11,10 @@ window.LFA_SEASONS = [
   {
     id: "s1",
     name: "Season 1",
-    period: "January onward",
+    period: "January – February 2027",
     status: "upcoming",
     note: "Full public rollout and community growth push.",
-    withdrawal: "Jan 1, 6:00 AM UTC – Jan 2, 11:59 PM UTC"
+    withdrawal: "Mar 1, 6:00 AM UTC – Mar 2, 11:59 PM UTC (pays the season that just ended)"
   },
   {
     id: "s0",
@@ -22,15 +22,15 @@ window.LFA_SEASONS = [
     period: "November – December",
     status: "upcoming",
     note: "First live season and the first AP pool distribution.",
-    withdrawal: "Nov 1, 6:00 AM UTC – Nov 2, 11:59 PM UTC (window follows the season calendar)"
+    withdrawal: "Jan 1, 6:00 AM UTC – Jan 2, 11:59 PM UTC (2027)"
   },
   {
     id: "test",
     name: "Testing Season",
     period: "September – October",
     status: "live",
-    note: "Check-in streaks, the Earn page, tasks and the Leaderboard are live for feedback and bug fixes.",
-    withdrawal: "Opens after the season closes",
+    note: "Check-in, spin, chest, Earn hub, tasks and the Leaderboard are live for feedback and bug fixes.",
+    withdrawal: "Nov 1, 6:00 AM UTC – Nov 2, 11:59 PM UTC (2026)",
     participants: null, totalAp: null, apUsdt: null, totalUp: null, upUsdt: null,
     paid: []
   }

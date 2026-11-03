@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 128" role="img" aria-label="Live For Ads">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17342a"/><stop offset="1" stop-color="#0b1715"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd978"/><stop offset=".55" stop-color="#f4b43c"/><stop offset="1" stop-color="#d9891a"/></linearGradient>
+    <linearGradient id="grn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dffc9"/><stop offset="1" stop-color="#1fbf86"/></linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="34" fill="url(#bg)"/>
+  <circle cx="78" cy="68" r="30" fill="url(#grn)" fill-opacity=".92"/>
+  <circle cx="52" cy="64" r="34" fill="url(#gold)"/>
+  <path d="M43 46 L72 64 L43 82 Z" fill="#1b1300" stroke="#1b1300" stroke-width="6" stroke-linejoin="round"/>
+  <text x="152" y="70" font-family="Bricolage Grotesque, Poppins, Segoe UI, Arial, sans-serif" font-size="58" font-weight="800" fill="#0b1715">Live For <tspan fill="#d9891a">Ads</tspan></text>
+  <text x="154" y="104" font-family="Instrument Sans, Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="4" fill="#4d6258">AD-TO-EARN · TELEGRAM</text>
+</svg>

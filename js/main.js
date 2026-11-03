@@ -16,10 +16,10 @@
   var NAV = [
     ["index.html", "Home", "home"], ["earn.html", "Earn", "earn"], ["points.html", "Points", "points"],
     ["leaderboard.html", "Leaderboard", "leaderboard"], ["seasons.html", "Seasons", "seasons"],
-    ["referral.html", "Referral", "referral"], ["roadmap.html", "Roadmap", "roadmap"], ["whitepaper.html", "Whitepaper", "whitepaper"]
+    ["referral.html", "Referral", "referral"], ["roadmap.html", "Roadmap", "roadmap"], ["token.html", "Token", "token"], ["whitepaper.html", "Whitepaper", "whitepaper"]
   ];
-  var SUB = { home: "Start here", earn: "Check-ins, ads, tasks", points: "AP and UP explained", leaderboard: "Weekly top 10", seasons: "Payouts and windows", referral: "Invite friends", roadmap: "What comes next", whitepaper: "The full document" };
-  var LOGO = '<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#13261f" stroke="rgba(190,255,230,.2)"/><circle cx="25" cy="33" r="14" fill="#f4b43c"/><circle cx="40" cy="33" r="14" fill="#4fe3a3" fill-opacity=".9"/><path d="M25 26v14M19 33h12" stroke="#1b1300" stroke-width="3" stroke-linecap="round"/></svg>';
+  var SUB = { home: "Start here", earn: "Check-ins, ads, tasks", points: "AP and UP explained", leaderboard: "Weekly top 10", seasons: "Payouts and windows", referral: "Invite friends", roadmap: "What comes next", token: "How, when, why", whitepaper: "The full document" };
+  var LOGO = '<img src="assets/lfa-logo.svg" alt="" width="30" height="30" style="border-radius:9px;display:block">';
 
 
   /* Navigation CSS lives here on purpose: it overrides any older cached style.css,
@@ -75,7 +75,7 @@
       '<p style="margin-top:16px;font-size:.95rem">Ad-to-Earn Telegram Mini App. Built for and by its community.</p></div>' +
       '<div><h4>Product</h4><a href="earn.html">How to earn</a><a href="points.html">AP &amp; UP points</a><a href="leaderboard.html">Leaderboard</a><a href="referral.html">Referral program</a></div>' +
       '<div><h4>Payouts</h4><a href="seasons.html">Seasons &amp; payouts</a><a href="seasons.html#withdraw">Withdrawal window</a><a href="faq.html">Anti-fraud &amp; FAQ</a></div>' +
-      '<div><h4>Project</h4><a href="whitepaper.html">Whitepaper v' + (S.whitepaperVersion || "4.0") + '</a><a href="roadmap.html">Roadmap &amp; LFA token</a><a href="' + (S.telegramChannel || "#") + '" target="_blank" rel="noopener">Telegram channel</a></div></div>' +
+      '<div><h4>Project</h4><a href="whitepaper.html">Whitepaper v' + (S.whitepaperVersion || "5.0") + '</a><a href="roadmap.html">Roadmap</a><a href="token.html">LFA token: how, when, why</a><a href="' + (S.telegramChannel || "#") + '" target="_blank" rel="noopener">Telegram channel</a></div></div>' +
       '<small>Disclaimer: This website describes the intended design and mechanics of Live For Ads at its current stage. Features, point values, ratios and timelines may change. AP payouts depend on actual advertising revenue and community size; UP payouts depend on offerwall partner availability. Nothing here is financial or investment advice, and no LFA token exists yet. &copy; Live For Ads.</small></div></footer>' +
       '<div class="toast" id="toast"></div>');
 
