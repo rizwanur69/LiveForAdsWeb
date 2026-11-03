@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="LFA coin (dark)">
+  <title>LFA</title>
+  <circle cx="128" cy="128" r="124" fill="#0B1715"/>
+  <circle cx="128" cy="128" r="116" fill="none" stroke="#F4B43C" stroke-width="7"/>
+  <path fill="#F4B43C" transform="translate(128 128) scale(1.04) translate(-148 -126)" d="M84 58h30a6 6 0 0 1 6 6v92h46v-26a4 4 0 0 1 6.2-3.3l44 30a4 4 0 0 1 0 6.6l-44 30a4 4 0 0 1-6.2-3.3v-8H84a6 6 0 0 1-6-6V64a6 6 0 0 1 6-6z"/>
+</svg>

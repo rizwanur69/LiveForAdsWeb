@@ -1,25 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="LFA coin">
-  <defs>
-    <radialGradient id="face" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#fff0b8"/><stop offset=".35" stop-color="#f7c451"/><stop offset=".75" stop-color="#e09a22"/><stop offset="1" stop-color="#b9740f"/></radialGradient>
-    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset=".5" stop-color="#d9891a"/><stop offset="1" stop-color="#8f5200"/></linearGradient>
-    <linearGradient id="inner" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff0b8" stop-opacity=".9"/><stop offset="1" stop-color="#a86408" stop-opacity=".9"/></linearGradient>
-    <linearGradient id="grn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dffc9"/><stop offset="1" stop-color="#1fbf86"/></linearGradient>
-    <path id="arcTop" d="M 36 128 A 92 92 0 0 1 220 128"/>
-    <path id="arcBot" d="M 28 128 A 100 100 0 0 0 228 128"/>
-  </defs>
-  <ellipse cx="128" cy="238" rx="78" ry="9" fill="#000" fill-opacity=".18"/>
-  <circle cx="128" cy="124" r="116" fill="url(#rim)"/>
-  <g stroke="#8f5200" stroke-opacity=".35" stroke-width="2">
-    <circle cx="128" cy="124" r="116" fill="none" stroke-dasharray="2 5.2" stroke-width="5"/>
-  </g>
-  <circle cx="128" cy="124" r="104" fill="url(#face)"/>
-  <circle cx="128" cy="124" r="96" fill="none" stroke="url(#inner)" stroke-width="3"/>
-  <circle cx="128" cy="124" r="62" fill="#fff" fill-opacity=".10"/>
-  <circle cx="150" cy="132" r="34" fill="url(#grn)" fill-opacity=".95"/>
-  <circle cx="116" cy="124" r="38" fill="#0b1715"/>
-  <circle cx="116" cy="124" r="38" fill="none" stroke="#ffd978" stroke-width="3"/>
-  <path d="M105 104 L140 124 L105 144 Z" fill="#f4b43c" stroke="#f4b43c" stroke-width="6" stroke-linejoin="round"/>
-  <text font-family="Bricolage Grotesque, Poppins, Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="9" fill="#6b3d00" text-anchor="middle"><textPath href="#arcTop" startOffset="50%">LIVE FOR ADS</textPath></text>
-  <text x="128" y="206" font-family="Bricolage Grotesque, Poppins, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="8" fill="#6b3d00" text-anchor="middle">LFA</text>
-  <path d="M52 70 A 96 96 0 0 1 120 30" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="6" stroke-linecap="round"/>
+  <title>LFA</title>
+  <circle cx="128" cy="128" r="124" fill="#F4B43C"/>
+  <circle cx="128" cy="128" r="124" fill="none" stroke="#D9891A" stroke-width="8"/>
+  <circle cx="128" cy="128" r="104" fill="none" stroke="#FFF3D1" stroke-opacity=".55" stroke-width="4"/>
+  <path fill="#0B1715" transform="translate(128 128) scale(1.04) translate(-148 -126)" d="M84 58h30a6 6 0 0 1 6 6v92h46v-26a4 4 0 0 1 6.2-3.3l44 30a4 4 0 0 1 0 6.6l-44 30a4 4 0 0 1-6.2-3.3v-8H84a6 6 0 0 1-6-6V64a6 6 0 0 1 6-6z"/>
 </svg>

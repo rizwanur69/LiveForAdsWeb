@@ -61,7 +61,7 @@
       withdrawal: st.withdrawal || (status === "live" ? "Opens after the season closes" : "")
     };
     if (status === "paid") {
-      o.participants = b.participants || 0;
+      o.participants = b.totalUsers || b.participants || 0;   // total users of that season
       o.totalAp = b.totalPointsEarned || 0;
       o.apUsdt = b.apAllocation || 0;
       o.totalUp = b.totalUp || 0;
